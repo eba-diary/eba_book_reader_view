@@ -22,7 +22,7 @@ br.getPageURI = function(index, reduce, rotate) {
     // reduce and rotate are ignored in this simple implementation, but we
     // could e.g. look at reduce and load images from a different directory
     // or pass the information to an image server
-    var leafStr = '000';            
+    var leafStr = '105';            
     var imgStr = (index+1).toString();
     var re = new RegExp("0{"+imgStr.length+"}$");
     var url = '../../../eba_diary_content/eba_volume_19/'+leafStr.replace(re, imgStr) + '.jpg';
