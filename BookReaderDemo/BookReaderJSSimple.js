@@ -22,10 +22,15 @@ br.getPageURI = function(index, reduce, rotate) {
     // reduce and rotate are ignored in this simple implementation, but we
     // could e.g. look at reduce and load images from a different directory
     // or pass the information to an image server
-    var leafStr = '105';            
-    var imgStr = (index+1).toString();
-    var re = new RegExp("0{"+imgStr.length+"}$");
-    var url = '../../../eba_diary_content/eba_volume_19/'+leafStr.replace(re, imgStr) + '.jpg';
+    var leafStr = '105';
+    var leafVar = parseInt(leafStr);
+    leafVar += index;
+    console.log(index);
+    //var imgStr = (index+1).toString();
+    //var re = new RegExp("0{"+imgStr.length+"}$");
+    //var url = '../../../eba_diary_content/eba_volume_19/'+leafStr.replace(re, imgStr) + '.jpg';
+    var url = '../../../eba_diary_content/eba_volume_19/'+ leafVar + '.jpg';
+    console.log(url);
     return url;
 }
 
@@ -77,7 +82,7 @@ br.getPageNum = function(index) {
 }
 
 // Total number of leafs
-br.numLeafs = 15;
+br.numLeafs = 2;
 
 // Book title and the URL used for the book title link
 br.bookTitle= 'Open Library BookReader Presentation';
